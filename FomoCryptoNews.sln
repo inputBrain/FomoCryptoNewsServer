@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FomoCryptoNews.Pooling", "FomoCryptoNews.Pooling\FomoCryptoNews.Pooling.csproj", "{D9DA53D1-5359-423E-8157-00E656EB633C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FomoCryptoNews.Host", "FomoCryptoNews.Host\FomoCryptoNews.Host.csproj", "{312AC0D1-5804-44ED-8BD7-605E707A9BE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FomoCryptoNews.Database", "FomoCryptoNews.Database\FomoCryptoNews.Database.csproj", "{F3E49F39-E647-41FA-9DB8-A10056A4EBAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FomoCryptoNews.Api.Service", "FomoCryptoNews.Api.Service\FomoCryptoNews.Api.Service.csproj", "{EBCC2D7F-D356-44D7-A85E-99285B195C9D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9DA53D1-5359-423E-8157-00E656EB633C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9DA53D1-5359-423E-8157-00E656EB633C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9DA53D1-5359-423E-8157-00E656EB633C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9DA53D1-5359-423E-8157-00E656EB633C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{312AC0D1-5804-44ED-8BD7-605E707A9BE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{312AC0D1-5804-44ED-8BD7-605E707A9BE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{312AC0D1-5804-44ED-8BD7-605E707A9BE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{312AC0D1-5804-44ED-8BD7-605E707A9BE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3E49F39-E647-41FA-9DB8-A10056A4EBAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3E49F39-E647-41FA-9DB8-A10056A4EBAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3E49F39-E647-41FA-9DB8-A10056A4EBAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3E49F39-E647-41FA-9DB8-A10056A4EBAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBCC2D7F-D356-44D7-A85E-99285B195C9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBCC2D7F-D356-44D7-A85E-99285B195C9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBCC2D7F-D356-44D7-A85E-99285B195C9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBCC2D7F-D356-44D7-A85E-99285B195C9D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
