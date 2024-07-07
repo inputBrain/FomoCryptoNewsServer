@@ -4,6 +4,5 @@ namespace FomoCryptoNews.Parsers.Cryptoslate;
 
 public interface ICryptoslateParser
 {
-    Task<CryptoslateNewsDto> ParseAllNews(CancellationToken cancellationToken);
-
+    Task<List<CryptoslateNewsDto>> ParseNewsByAmountOfPages(int pageParseCount, CancellationToken cancellationToken);
 }
