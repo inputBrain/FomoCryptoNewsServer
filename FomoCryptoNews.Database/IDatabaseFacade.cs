@@ -1,9 +1,8 @@
-﻿using FomoCryptoNews.Database.TestNews;
+﻿using FomoCryptoNews.Database.Cryptoslate;
 
 namespace FomoCryptoNews.Database;
 
 public interface IDatabaseFacade
 {
-    ITestNewsRepository NewsRepository { get; }
+    ICryptoslateNewsRepository CryptoslateNewsRepository { get; }
 }
-

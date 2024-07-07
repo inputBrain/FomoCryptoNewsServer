@@ -2,5 +2,11 @@
 
 public enum Status
 {
-    
+    Parsed = 1,
+
+    Approved,
+
+    Declined,
+
+    Deleted
 }
