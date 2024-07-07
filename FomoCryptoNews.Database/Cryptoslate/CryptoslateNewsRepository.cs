@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
 using System.Threading.Tasks;
@@ -52,10 +53,29 @@ public class CryptoslateNewsRepository : AbstractRepository<CryptoslateNewsModel
     }
 
 
+    public async Task UpdateStatus(CryptoslateNewsModel model, Status status)
+    {
+        model.Status = status;
+        await UpdateModelAsync(model);
+    }
+
+
     public async Task<ImmutableArray<CryptoslateNewsModel>> List(ImmutableArray<string> titles)
     {
         var collection = await DbModel.Where(x => titles.Contains(x.Title)).ToListAsync();
 
         return [..collection];
+    }
+
+
+    public async Task<List<CryptoslateNewsModel>> ListAllByStatus(Status status)
+    {
+        return await DbModel.Where(x => x.Status == status).ToListAsync();
+    }
+
+
+    public async Task<List<CryptoslateNewsModel>> ListAll()
+    {
+        return await DbModel.Where(x => x.Status != Status.Approved).ToListAsync();
     }
 }
