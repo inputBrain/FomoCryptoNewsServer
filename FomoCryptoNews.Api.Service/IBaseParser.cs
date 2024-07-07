@@ -6,4 +6,6 @@ namespace FomoCryptoNews.Api.Service;
 public interface IBaseParser
 {
     Task<T> ParseGet<T>(string url, CancellationToken cancellationToken);
+
+    Task<string> GetWebsiteStringAsync(string url, CancellationToken cancellationToken);
 }

@@ -8,8 +8,15 @@ namespace FomoCryptoNews.Api.Service;
 
 public class BaseParser : IBaseParser
 {
+    private static readonly JsonSerializerOptions JsonSerializerOptions = new()
+    {
+        PropertyNameCaseInsensitive = true
+    };
+
     private readonly HttpClient _client;
+
     private readonly ILogger<BaseParser> _logger;
+
 
     public BaseParser(HttpClient client, ILogger<BaseParser> logger)
     {
@@ -28,8 +35,9 @@ public class BaseParser : IBaseParser
         return appData;
     }
 
-    private static readonly JsonSerializerOptions JsonSerializerOptions = new()
+
+    public async Task<string> GetWebsiteStringAsync(string url, CancellationToken cancellationToken)
     {
-        PropertyNameCaseInsensitive = true
-    };
+        return await _client.GetStringAsync(url, cancellationToken);
+    }
 }
