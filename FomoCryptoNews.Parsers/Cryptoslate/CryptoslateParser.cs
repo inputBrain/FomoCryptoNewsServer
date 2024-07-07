@@ -1,4 +1,5 @@
-﻿using FomoCryptoNews.Api.Service;
+﻿using System.Text;
+using FomoCryptoNews.Api.Service;
 using FomoCryptoNews.ExternalDto.Cryptoslate;
 using HtmlAgilityPack;
 using Microsoft.Extensions.Logging;
@@ -96,13 +97,32 @@ public class CryptoslateParser : ICryptoslateParser
             newsItem.Cover = imageNode.GetAttributeValue("src", "");
         }
 
+        var maxDescriptionLength = 4096 - newsItem.Title!.Length;
+
         var articleNode = htmlDocument.DocumentNode.SelectSingleNode("//article[@class='full-article']");
         if (articleNode != null)
         {
-            var paragraphs = articleNode.SelectNodes(".//p");
-            if (paragraphs != null)
+            var paragraphs = articleNode.ChildNodes.Where(n => n.Name == "p").ToList();
+            if (paragraphs.Any())
             {
-                newsItem.Description = string.Join("\n", paragraphs.Select(p => p.InnerText.Trim()));
+                var description = new StringBuilder();
+                foreach (var paragraph in paragraphs)
+                {
+                    var trimmedText = paragraph.InnerText.Trim();
+
+                    if (description.Length + trimmedText.Length + 2 > maxDescriptionLength)
+                    {
+                        break;
+                    }
+
+                    if (description.Length > 0)
+                    {
+                        description.Append("\n\n");
+                    }
+                    description.Append(trimmedText);
+                }
+
+                newsItem.Description = description.ToString();
             }
         }
 
