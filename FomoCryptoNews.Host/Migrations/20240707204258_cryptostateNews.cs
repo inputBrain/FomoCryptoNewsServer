@@ -7,13 +7,13 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace FomoCryptoNews.Host.Migrations
 {
     /// <inheritdoc />
-    public partial class testNewsModel : Migration
+    public partial class cryptostateNews : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "TestNewsModel",
+                name: "CryptoslateNews",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
@@ -21,12 +21,13 @@ namespace FomoCryptoNews.Host.Migrations
                     Title = table.Column<string>(type: "text", nullable: true),
                     Description = table.Column<string>(type: "text", nullable: true),
                     Cover = table.Column<string>(type: "text", nullable: true),
-                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
+                    Status = table.Column<int>(type: "integer", nullable: false),
+                    CreatedAt = table.Column<DateTimeOffset>(type: "timestamp with time zone", nullable: false),
+                    UpdatedAt = table.Column<DateTimeOffset>(type: "timestamp with time zone", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_TestNewsModel", x => x.Id);
+                    table.PrimaryKey("PK_CryptoslateNews", x => x.Id);
                 });
         }
 
@@ -34,7 +35,7 @@ namespace FomoCryptoNews.Host.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "TestNewsModel");
+                name: "CryptoslateNews");
         }
     }
 }

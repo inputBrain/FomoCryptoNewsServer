@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace FomoCryptoNews.Host.Migrations
 {
     [DbContext(typeof(PostgreSqlContext))]
-    [Migration("20240701101103_testNewsModel")]
-    partial class testNewsModel
+    [Migration("20240707204258_cryptostateNews")]
+    partial class cryptostateNews
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,7 +25,7 @@ namespace FomoCryptoNews.Host.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("FomoCryptoNews.Database.TestNews.TestNewsModel", b =>
+            modelBuilder.Entity("FomoCryptoNews.Database.Cryptoslate.CryptoslateNewsModel", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -36,21 +36,24 @@ namespace FomoCryptoNews.Host.Migrations
                     b.Property<string>("Cover")
                         .HasColumnType("text");
 
-                    b.Property<DateTime>("CreatedAt")
+                    b.Property<DateTimeOffset>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Description")
                         .HasColumnType("text");
 
+                    b.Property<int>("Status")
+                        .HasColumnType("integer");
+
                     b.Property<string>("Title")
                         .HasColumnType("text");
 
-                    b.Property<DateTime?>("UpdatedAt")
+                    b.Property<DateTimeOffset?>("UpdatedAt")
                         .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
 
-                    b.ToTable("TestNewsModel");
+                    b.ToTable("CryptoslateNews");
                 });
 #pragma warning restore 612, 618
         }
