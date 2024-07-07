@@ -8,6 +8,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FomoCryptoNews.Database", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FomoCryptoNews.Api.Service", "FomoCryptoNews.Api.Service\FomoCryptoNews.Api.Service.csproj", "{EBCC2D7F-D356-44D7-A85E-99285B195C9D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FomoCryptoNews.Parsers", "FomoCryptoNews.Parsers\FomoCryptoNews.Parsers.csproj", "{7774BBFF-4363-4502-8752-5623623EC2FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{2353F9D4-AA8E-4E36-A391-83C2F27E04E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FomoCryptoNews.ExternalDto", "FomoCryptoNews.ExternalDto\FomoCryptoNews.ExternalDto.csproj", "{77D80A3D-EA07-41D8-9750-0375A8E155D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FomoCryptoNews.UseCase", "FomoCryptoNews.UseCase\FomoCryptoNews.UseCase.csproj", "{4F60C3FA-4656-4D16-85DD-54565B5449EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +38,21 @@ Global
 		{EBCC2D7F-D356-44D7-A85E-99285B195C9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBCC2D7F-D356-44D7-A85E-99285B195C9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBCC2D7F-D356-44D7-A85E-99285B195C9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7774BBFF-4363-4502-8752-5623623EC2FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7774BBFF-4363-4502-8752-5623623EC2FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7774BBFF-4363-4502-8752-5623623EC2FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7774BBFF-4363-4502-8752-5623623EC2FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2353F9D4-AA8E-4E36-A391-83C2F27E04E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2353F9D4-AA8E-4E36-A391-83C2F27E04E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2353F9D4-AA8E-4E36-A391-83C2F27E04E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2353F9D4-AA8E-4E36-A391-83C2F27E04E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77D80A3D-EA07-41D8-9750-0375A8E155D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77D80A3D-EA07-41D8-9750-0375A8E155D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77D80A3D-EA07-41D8-9750-0375A8E155D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77D80A3D-EA07-41D8-9750-0375A8E155D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F60C3FA-4656-4D16-85DD-54565B5449EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F60C3FA-4656-4D16-85DD-54565B5449EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F60C3FA-4656-4D16-85DD-54565B5449EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F60C3FA-4656-4D16-85DD-54565B5449EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
