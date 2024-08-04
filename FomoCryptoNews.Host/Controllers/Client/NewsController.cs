@@ -56,7 +56,7 @@ public class NewsController : AbstractController<NewsController>
     }
 
 
-    [HttpGet]
+    [HttpPost]
     public async Task<IActionResult> ApproveNews(int newsId)
     {
         var model = await Db.CryptoslateNewsRepository.GetOne(newsId);
