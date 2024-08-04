@@ -48,9 +48,9 @@ public class NewsController : AbstractController<NewsController>
 
 
     [HttpGet]
-    public async Task<IActionResult> GetAll()
+    public async Task<IActionResult> GetAll(int pageIndex, int pageSize)
     {
-        var collection = await Db.CryptoslateNewsRepository.ListAll();
+        var collection = await Db.CryptoslateNewsRepository.ListAll(pageIndex, pageSize);
 
         return SendOk(collection);
     }

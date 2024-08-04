@@ -74,8 +74,12 @@ public class CryptoslateNewsRepository : AbstractRepository<CryptoslateNewsModel
     }
 
 
-    public async Task<List<CryptoslateNewsModel>> ListAll()
+    public async Task<List<CryptoslateNewsModel>> ListAll(int pageIndex, int pageSize)
     {
-        return await DbModel.Where(x => x.Status != Status.Approved).ToListAsync();
+        return await DbModel
+            .Where(x => x.Status != Status.Approved)
+            .Skip(pageIndex * pageSize)
+            .Take(pageSize)
+            .ToListAsync();
     }
 }

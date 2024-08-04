@@ -18,5 +18,5 @@ public interface ICryptoslateNewsRepository
 
     Task<List<CryptoslateNewsModel>> ListAllByStatus(Status status);
 
-    Task<List<CryptoslateNewsModel>> ListAll();
+    Task<List<CryptoslateNewsModel>> ListAll(int pageIndex, int pageSize);
 }
