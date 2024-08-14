@@ -11,7 +11,7 @@ class NewsItem
 
 class Program
 {
-    private static readonly HttpClient client = new HttpClient();
+    private static readonly HttpClient client = new();
 
     static async Task Main(string[] args)
     {
