@@ -17,6 +17,8 @@
 
     <ItemGroup>
         <ProjectReference Include="..\FomoCryptoNews.Api.Service\FomoCryptoNews.Api.Service.csproj"/>
+        <ProjectReference Include="..\FomoCryptoNews.Cms.Codec\FomoCryptoNews.Cms.Codec.csproj" />
+        <ProjectReference Include="..\FomoCryptoNews.Cms\FomoCryptoNews.Cms.csproj" />
         <ProjectReference Include="..\FomoCryptoNews.Database\FomoCryptoNews.Database.csproj"/>
     </ItemGroup>
 
