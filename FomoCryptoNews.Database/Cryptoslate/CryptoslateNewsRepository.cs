@@ -74,12 +74,22 @@ public class CryptoslateNewsRepository : AbstractRepository<CryptoslateNewsModel
     }
 
 
-    public async Task<List<CryptoslateNewsModel>> ListAll(int pageIndex, int pageSize)
+    public async Task<(List<CryptoslateNewsModel>, int)> ListAll(int skip, int take)
     {
-        return await DbModel
+        var count = await CountAsync();
+
+        var collection = await DbModel
             .OrderBy(x => x.CreatedAt)
-            .Skip(pageIndex * pageSize)
-            .Take(pageSize)
+            .Skip(skip * take)
+            .Take(take)
             .ToListAsync();
+
+        return (collection, count);
+    }
+
+
+    private async Task<int> CountAsync()
+    {
+        return await DbModel.CountAsync();
     }
 }
