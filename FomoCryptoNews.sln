@@ -18,6 +18,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FomoCryptoNews.UseCase", "F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FomoCryptoNews.Worker", "FomoCryptoNews.Worker\FomoCryptoNews.Worker.csproj", "{8DDEC79B-FD1A-4594-9AB4-5AA6804EE53E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FomoCryptoNews.Cms", "FomoCryptoNews.Cms\FomoCryptoNews.Cms.csproj", "{4E248AFD-4E40-410C-BF1F-E1B53877B385}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FomoCryptoNews.Cms.Codec", "FomoCryptoNews.Cms.Codec\FomoCryptoNews.Cms.Codec.csproj", "{1335B421-6B19-461F-B45E-9D7E5F3102B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,5 +64,13 @@ Global
 		{8DDEC79B-FD1A-4594-9AB4-5AA6804EE53E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DDEC79B-FD1A-4594-9AB4-5AA6804EE53E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DDEC79B-FD1A-4594-9AB4-5AA6804EE53E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E248AFD-4E40-410C-BF1F-E1B53877B385}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E248AFD-4E40-410C-BF1F-E1B53877B385}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E248AFD-4E40-410C-BF1F-E1B53877B385}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E248AFD-4E40-410C-BF1F-E1B53877B385}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1335B421-6B19-461F-B45E-9D7E5F3102B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1335B421-6B19-461F-B45E-9D7E5F3102B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1335B421-6B19-461F-B45E-9D7E5F3102B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1335B421-6B19-461F-B45E-9D7E5F3102B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
