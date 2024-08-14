@@ -21,7 +21,7 @@ class Program
         for (var page = 1; page <= maxPages; page++)
         {
             var url = page == 1 ? $"{baseUrl}/news/" : $"{baseUrl}/news/{page}/";
-            Console.WriteLine($"Обрабатываем страницу: {url}");
+            Console.WriteLine($"Start process for link: {url}");
 
             var html = await client.GetStringAsync(url);
             var htmlDocument = new HtmlDocument();
@@ -62,7 +62,7 @@ class Program
 
     static async Task ProcessPostPage(string url)
     {
-        Console.WriteLine($"Обрабатываем пост: {url}");
+        Console.WriteLine($"url: {url}");
 
         var html = await client.GetStringAsync(url);
         var htmlDocument = new HtmlDocument();
@@ -91,13 +91,9 @@ class Program
                 newsItem.Content = string.Join("\n", paragraphs.Select(p => p.InnerText.Trim()));
             }
         }
-
-        // Выводим извлеченную информацию
-        Console.WriteLine($"Заголовок: {newsItem.Title}");
-        Console.WriteLine($"Изображение: {newsItem.ImageSrc}");
-        Console.WriteLine($"Содержание: {newsItem.Content?.Substring(0, Math.Min(newsItem.Content.Length, 100))}...");
+        Console.WriteLine($"Title: {newsItem.Title}");
+        Console.WriteLine($"ImageSrc: {newsItem.ImageSrc}");
+        Console.WriteLine($"Content: {newsItem.Content?.Substring(0, Math.Min(newsItem.Content.Length, 100))}...");
         Console.WriteLine();
-
-        // Здесь вы можете добавить код для сохранения данных в базу данных или файл
     }
 }
