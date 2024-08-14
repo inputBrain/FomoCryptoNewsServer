@@ -14,7 +14,7 @@ public static class CryptostateNewsCodec
             Id = dbModel.Id,
             Title = dbModel.Title,
             Description = dbModel.Description,
-            Cover = dbModel.Cover,
+            Cover = dbModel.Cover ?? "Image not fount",
             StatusPayload = _encodeStatus(dbModel.Status),
             CreatedAt = _toUnixTime(dbModel.CreatedAt)
         };

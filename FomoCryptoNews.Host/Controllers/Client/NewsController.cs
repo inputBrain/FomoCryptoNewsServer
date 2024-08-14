@@ -50,11 +50,11 @@ public class NewsController : AbstractController<NewsController>
     }
 
 
-    [HttpPost]
+    [HttpGet]
     [ProducesResponseType(typeof(GetAllNews.Response), 200)]
-    public async Task<GetAllNews.Response> ListAllNews(GetAllNews request)
+    public async Task<GetAllNews.Response> ListAllNews(int skip, int take)
     {
-        var (collection, count) = await Db.CryptoslateNewsRepository.ListAll(request.Skip, request.Take);
+        var (collection, count) = await Db.CryptoslateNewsRepository.ListAll(skip, take);
 
         return new GetAllNews.Response(collection.Select(CryptostateNewsCodec.EncodeNews).ToList(), count);
     }
