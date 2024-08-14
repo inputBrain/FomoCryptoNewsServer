@@ -1,4 +1,7 @@
-﻿using System.Threading.Tasks;
+﻿using System.Linq;
+using System.Threading.Tasks;
+using FomoCryptoNews.Cms.Codec.CryptostateCodec;
+using FomoCryptoNews.Cms.Cryptostate;
 using FomoCryptoNews.Database;
 using FomoCryptoNews.Database.Cryptoslate;
 using FomoCryptoNews.Host.Configs;
@@ -39,7 +42,7 @@ public class NewsController : AbstractController<NewsController>
 
 
     [HttpGet]
-    public async Task<IActionResult> GetAllByStatus(Status status)
+    public async Task<IActionResult> ListAllByStatus(Status status)
     {
         var collection = await Db.CryptoslateNewsRepository.ListAllByStatus(status);
 
@@ -47,12 +50,13 @@ public class NewsController : AbstractController<NewsController>
     }
 
 
-    [HttpGet]
-    public async Task<IActionResult> GetAll(int pageIndex, int pageSize)
+    [HttpPost]
+    [ProducesResponseType(typeof(GetAllNews.Response), 200)]
+    public async Task<GetAllNews.Response> ListAllNews(GetAllNews request)
     {
-        var collection = await Db.CryptoslateNewsRepository.ListAll(pageIndex, pageSize);
+        var (collection, count) = await Db.CryptoslateNewsRepository.ListAll(request.Skip, request.Take);
 
-        return SendOk(collection);
+        return new GetAllNews.Response(collection.Select(CryptostateNewsCodec.EncodeNews).ToList(), count);
     }
 
 
